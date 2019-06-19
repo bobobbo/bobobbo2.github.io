@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="./css/style2.css" rel="stylesheet"/>
+    <link href="css/aos.css" rel="stylesheet"/>
+    <link href="./font/Helvetica.ttf" rel="stylesheet">
+    <title>review</title>
+</head>
+<body>
+    <nav id="global-nav">
+        <div class="gn-content">
+            <ul id="gn-list">
+            <li>
+                <a href="index.html">Home</a></li><li>
+                <a id="gn_1">Review</a></li><li>
+                <a href="https://www.instagram.com/_yu_jin.99/?hl=ko">Instgram</a></li><li>
+                <a href="https://www.facebook.com/profile.php?id=100006499481742">Facebook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <div id="main">
+                <section class="section">
+                   <h2 class="hide">section1</h2>
+                    <p data-aos="fade-left" class="title">Reivew</p>
+                </section>
+                <section class="section" id="gn_1">
+                     <div class="img_box1">
+                         <img src="images/1585733-unsplash.jpg">
+                     </div>
+                     <div data-aos="fade-down" class="review_full">
+                        <div class="cotent_full">
+                        <h3>감상 후기및 설문조사 를 작성해주세요!</h3>
+                        <p class="demo_text">본 전시는 집에서 혼자 놀기를 좋아하는 혼놀족 들을 위한 온라인 사진전 입니다.
+                        <br>아래 빈칸에 후기 및 개선점 을 작성해주시면 추첨을 통해 오프라인 사진전 티켓을 드립니다.
+                        </p>
+                        <form action="/action_page.php">
+                        <div class="r_1">
+                            <p>이름</p>
+                            <input id="name" type="text" name="Name">
+                        </div>
+                        <div class="r_2">
+                            <p>나이</p>
+                            <input id="name" type="text" name="age">
+                        </div>
+                        <div class="r_3">
+                            <p>연락처</p>
+                            <input id="name" type="text" name="phone">
+                        </div>
+                        <div class="r_4">
+                            <p>본 전시를 알게된 경로</p>
+                            <input id="name" type="text" name="route">
+                        </div>
+                        <div class="r_5">
+                            <p>전시의 이해도는 어느정도 인가요?</p>
+                            <input id="name" type="text" name="understand">
+                        </div>
+                        <div class="r_6">
+                            <p>개선점이 있다면 어떤것이 있을까요?</p>
+                            <input id="name" type="text" name="impro">
+                        </div>
+                        <div class="r_7">
+                            <p>전시를 본 후 감상평을 자유롭게 작성해주세요!</p>
+                            <input id="enjoy" type="text" name="enjoy">
+                        </div>    
+                        </form>
+                        <a href="index.html"><button class="btn1">완료</button></a>
+                        </div>
+                     </div>
+                </section>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="js/aos.js"></script>
+        <script type="text/javascript">
+             AOS.init({
+                 duration : 2000,
+             });
+        </script>
+</body>
+</html>
