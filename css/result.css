@@ -2,19 +2,20 @@
 #result {
   display: none;
   min-height: 100vh;
-  /*box-shadow: #ddd 0px 0px 10px 5px;*/
-  background: rgb(252, 252, 252);
+  /*background: rgb(252, 252, 252);*/
   text-align: center;
   word-break: keep-all;
-  opacity: 0;
+  opacity: 0; /*이거 원래 0임!! 수정해쪄*/
+  /*display: block;*//*이건 없어야하는부분!! 내가 수정하려고 추가한거임!!! 다하고 지워야해*/
 }
-#score-box {
+/*#score-box {
   margin-bottom: 50px;
-}
+}*/
 #score-box > .title {
   animation: fade-in 0.6s ease-out 0.4s forwards, 
           going-down 0.6s ease-out 0.4s forwards;
   opacity: 0;
+    color: white;
 }
 #score-box > .point {
   margin: 10px 0 50px 0;
@@ -25,37 +26,27 @@
           going-down 0.6s ease-out 1.8s forwards;
   opacity: 0;
 }
-.pin {
-  width: 30px; 
-  height: 30px;
-  background-image: url('../img/pin.png');
-  background-size: cover;
-  animation: fade-in 0.5s ease-out 2.6s forwards, 
-          going-down 0.5s ease-out 2.6s forwards;
-  opacity: 0;
+.home{
+    position: fixed;
+    z-index: 999;
+    right: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50px;
+    float: right;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding-top: 18.5px;
 }
-.score-bar {
-  margin: 0 5%;
-  width: 90%;
-  height: 50px;
-  border-radius: 50px;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6fb7e8+0,855299+50,af3838+100 */
-  background: #6fb7e8; /* Old browsers */
-  background: -moz-linear-gradient(left,  #6fb7e8 0%, #855299 50%, #af3838 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  #6fb7e8 0%,#855299 50%,#af3838 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  #ffcee8 0%,#ff65b7 50%,#ff0087 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fb7e8', endColorstr='#af3838',GradientType=1 ); /* IE6-9 */
-  animation: fade-in 0.5s ease-out 2.5s forwards, 
-          going-down 0.5s ease-out 2.5s forwards;
-  opacity: 0;
-}
+
 .art {
   margin-bottom: 40px;
   width: 100%;
-  height: 90vh;
+  height: 50vh;
   max-height: 700px;
-  box-shadow: #ddd 0px 0px 10px 5px;
-  background-color: #fff;
   animation: fade-in 0.3s ease-out 3.2s both, 
           going-down 0.3s ease-out 3.2s both;
   opacity: 0;
@@ -74,6 +65,7 @@
   font-size: 17.6px;
   font-size: 1.1rem;
   font-weight: 350;
+  color: white;
 }
 #desc-box ~ p {
   display: inline-block;
@@ -81,8 +73,9 @@
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: bolder;
+    color: white;
 }
-.go-artist {
+.go-calender {
   font-weight: bolder;
   cursor: pointer;
 }
@@ -134,18 +127,18 @@
 }
 .btn {
   box-sizing: border-box;
-  margin: 0 30% 5px 30%;
+  margin: 5% 30% 5px 30%;
   width: 40%;
   height: 50px;
   line-height: 50px;
   border-radius: 20px;
-  background: #ff65b7;
+  background: red;
   color: #fff;
-  font-weight: 500;
+  font-weight: bold;
   transition: background-color 0.2s ease-in-out;
 }
 .btn:hover {
-  background: #d1207f;
+  background: #ff5e5e;
 }
 .btn > a {
   display: inline-block;
@@ -158,6 +151,8 @@
   color: rgba(0, 135, 245);
   font-weight: bold;
   word-wrap: break-word;
+    margin-bottom: 25px;
+    color: white
 }
 #intro-box {
   padding-top: 20px;
@@ -239,6 +234,9 @@
     font-size: 16px;
     font-size: 1rem;
   }
+    .home{
+        right: 10px;
+    }
 }
 
 @media all and (min-width: 768px) {
@@ -268,10 +266,9 @@
     padding: 25px 7.5% 0;
     font-size: 17.6px;
     font-size: 1.1rem;
-    margin-bottom : 25px;
   }
   .btn {
-    margin: 0 30% 10px 30%;
+    margin: 5% 30% 10px 30%;
   }
   #intro-box {
     padding-top: 45px;
@@ -315,7 +312,7 @@
     font-size: 20.8px;
     font-size: 1.3rem;
   }
-  .go-artist {
+  .go-calender {
     font-size: 17.6px;
     font-size: 1.1rem;
   }
@@ -331,7 +328,7 @@
     width: 30%;
   }
   .btn {
-    margin: 0 35%;
+    margin: 4% 35%;
     width: 30%;
   }
   .btn > a {
@@ -347,6 +344,9 @@
   .go-origin {
     margin: 25px 35% 0 35%;
   }
+    .home{
+        right: 40px;
+    }
 }
 
 @media all and (min-width: 1440px) {
@@ -354,17 +354,34 @@
     font-size: 88px;
     font-size: 5.5rem;
   }
-  .art {
-    max-height: 2000px;
-  }
   .desc {
-    margin: 35px 5% 50px 5%;
-    width: 90%;
-    line-height: 33.6px;
-    line-height: 2.1rem;
-    font-size: 22.4px;
-    font-size: 1.4rem;
+    margin: 0px;
+    width: 600px;
+    line-height: 2.0rem;
+    font-size: 1.2rem;
+    float: right;
+      margin-top: 100px;
+      margin-right: 60px;
   }
+    #result.container{
+        width: 1300px;
+        margin: 0 auto;
+        /*background-color: aquamarine;*/
+    }
+    .art {
+    max-height: 2000px;
+    margin: 0px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 356px;
+    display: inline-block;
+  }
+    .art > img{
+        width: 100%;;
+        height: 100%;
+        float: left;
+    } 
   .caution {
     padding: 20px 10%;
   }
