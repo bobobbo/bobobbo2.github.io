@@ -1,6 +1,8 @@
 const header = document.getElementById('header');
 const footer = document.getElementById('footer');
 const qna = document.getElementById('qna');
+const mainP = document.getElementById('main-page');/*메인페이지 id추가*/
+const Nbtn = document.getElementsByClassName('.next-btn');
 const u_name = document.querySelector('input[type=text]');
 const wrap = document.getElementById('wrap');
 const tabletMQL = window.matchMedia("all and (min-width: 768px)");
@@ -8,6 +10,45 @@ const pcMQL = window.matchMedia("all and (min-width: 1024px)");
 const ENDPOINT = 10;
 const select = [];
 let qIdx = -1;
+
+
+$( "#main-page" ).slideUp( 0 ).delay(800).fadeIn(800);
+
+//var prm = window.prompt("이번 주 사용 예상금액을 작성하세요");
+
+function next() {
+    const mainP = document.getElementById('main-page');
+    mainP.style.display = 'none';
+    const welcome = document.getElementById('welcome');
+    welcome.style.display = 'block';
+    
+    var money = '';
+    var prm = window.prompt("이번주 예상 사용금액은 얼마정도 인가요?");
+    if(prm == money){
+        window.alret("이 값을 꼭 기억하세요!");
+    }else{
+        
+    }
+}
+
+//var randomNumber = Math.floor(Math.random() * 6);
+//       
+//var userNumber = window.prompt("0~5 중에 하나를 선택하세요!");
+//// step2. 비교하기(맞는지 틀리는지)
+//// step3. 결과를 출력하기
+//if(userNumber == randomNumber){
+//  window.alert("정답입니다.")
+//}else if(userNumber > randomNumber){
+//  // parseInt : 문자형 데이터의 숫자를 숫자형으로!
+//  var result = parseInt(userNumber) - randomNumber
+//  window.alert(result + " 더 작아야 합니다.")
+//}else{
+//  var result = randomNumber - parseInt(userNumber)
+//  window.alert(result + " 더 커야 합니다.")
+//}
+
+
+
 
 const goTo = (dest) => {
   let elem;
@@ -72,27 +113,27 @@ const sortResult = (point) => {
 const goResult = () => {
   if (pcMQL.matches) {
     console.log('PC');
-    wrap.style.marginTop = '150px';
+    wrap.style.marginTop = '50px';
   } else if (tabletMQL.matches) {
     console.log('tablet');
-    wrap.style.marginTop = '115px';
+    wrap.style.marginTop = '15px';
   }
 
   const result = document.getElementById('result');
   const point = calcScore();
   const grade = sortResult(point);
   const pTitle = document.querySelector('.p');
-  const res_point = document.querySelector('.point');
-  const pin = document.querySelector('.pin');
+  /*const res_point = document.querySelector('.point');*/ /*이거 점수 변수인데 필요없으니까 지운다!!*/
+  /*const pin = document.querySelector('.pin');*/
   const img_url = 'img/image-' + grade + '.png';
   const res_img = document.createElement('img');
   const res_img_div = document.querySelector('.art');
   const animal = document.querySelector('.result');
   const desc = document.querySelector('.res');
 
-  pTitle.innerHTML = u_name.value + ' 님의 점수는...';
-  res_point.innerHTML = point + '점';
-  pin.style.marginLeft = infoList[grade].mLeft;
+  pTitle.innerHTML = u_name.value + ' 님의 유형은..';
+  /*res_point.innerHTML = point + '점'; 이거 점수 변수 나오는 식인데 필요없어서 지운다! / 얘때매 오류남*/
+  /*pin.style.marginLeft = infoList[grade].mLeft;*/
   res_img.src = img_url;
   res_img.alt = infoList[grade].name;
   res_img.title = infoList[grade].name;
@@ -101,9 +142,10 @@ const goResult = () => {
   desc.innerHTML = infoList[grade].desc;
 
   setTimeout(() => {
-    header.style.display = 'block';
-    footer.style.display = 'block';
+    header.style.display = 'none';/*얘도 수정했음 원래 block이었음*/
+    footer.style.display = 'none';/*수정했ㅇ므!!*/
     result.style.display = 'block';
+    /*res_point.style.display = 'none';*//*이거 점수 변수인데 없어졌으면 좋겠어서 none으로 내가 써봤음*/
     header.style.animation =
       'fade-in 0.3s forwards';
     footer.style.animation =
@@ -227,7 +269,7 @@ const load = () => {
   u_name.addEventListener('blur', () => {
     try {
       if (u_name.value.length < 1) {
-        throw '이름을 입력하고 시작해 주세요.';
+        throw '이름을 입력해주세요!';
       }
       msg.innerHTML = '';
     } catch (err) {
@@ -238,7 +280,7 @@ const load = () => {
   start_btn.addEventListener('click', () => {
     try {
       if (u_name.value.length < 1) {
-        throw '이름을 입력하고 시작해 주세요.';
+        throw '이름을 입력해주세요!';
       }
       msg.innerHTML = '';
       start_btn.disabled = true;
