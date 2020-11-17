@@ -79,7 +79,7 @@ body {
 .next-btn:hover{
     background-color:#c30000;
 }
-@media all and (min-width: 500px){
+@media all and (min-width:320px) and (max-width:768px) {
     .m-img-money{
         width: 260px;
         height: 160px;
@@ -91,7 +91,7 @@ body {
     }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 768px)and(min-height : 1024px) {
   /* qna에서 margin-top을 없애야 함 */
   #wrap {
 /*    margin-top: 115px;*/
