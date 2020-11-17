@@ -8,9 +8,11 @@
   opacity: 0; /*이거 원래 0임!! 수정해쪄*/
   /*display: block;*//*이건 없어야하는부분!! 내가 수정하려고 추가한거임!!! 다하고 지워야해*/
 }
-/*#score-box {
-  margin-bottom: 50px;
-}*/
+#result .result{
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 45px;
+}
 #score-box > .title {
   animation: fade-in 0.6s ease-out 0.4s forwards, 
           going-down 0.6s ease-out 0.4s forwards;
