@@ -73,10 +73,10 @@ const qnaList = [
         A : 아니요, 3만원이상, 5만원 이상, 셀 수 없이
       */
     a: [
-      { answer: 'a. 아니요', score: 1 },
-      { answer: 'b. 5만원 미만', score: 2 },
-      { answer: 'c. 5~10만원 미만', score: 3 },
-      { answer: 'd. 10만원 이상', score: 4 }
+      { answer: 'a. 아니요', score: 4 },
+      { answer: 'b. 5만원 미만', score: 3 },
+      { answer: 'c. 5~10만원 미만', score: 2 },
+      { answer: 'd. 10만원 이상', score: 1 }
     ]
   },
   {
