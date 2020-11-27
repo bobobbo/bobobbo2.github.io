@@ -14,7 +14,6 @@ let qIdx = -1;
 
 $( "#main-page" ).slideUp( 0 ).delay(800).fadeIn(800);
 
-//var prm = window.prompt("이번 주 사용 예상금액을 작성하세요");
 
 function next() {
     const mainP = document.getElementById('main-page');
@@ -131,7 +130,7 @@ const goResult = () => {
   const animal = document.querySelector('.result');
   const desc = document.querySelector('.res');
 
-  pTitle.innerHTML = u_name.value + ' 님의 유형은..';
+  pTitle.innerHTML = u_name.value + ' 님의 결과는..';
   /*res_point.innerHTML = point + '점'; 이거 점수 변수 나오는 식인데 필요없어서 지운다! / 얘때매 오류남*/
   /*pin.style.marginLeft = infoList[grade].mLeft;*/
   res_img.src = img_url;
