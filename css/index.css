@@ -97,6 +97,8 @@ a:hover{
 /*        margin-left: 10px;*/
     }
     p{
+    width: 300px;
+    margin: 0 auto;
     font-size: 10px;
     margin-top: 50px;
     color: #383757;
