@@ -2,7 +2,10 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+
+
+@media screen and (min-width:480px){
+    body{
     background-color: #020039;
 }
 h1{
@@ -68,15 +71,67 @@ a:hover{
     /*background-color: hotpink;*/
     box-sizing: border-box;
 }
+}
 
-@media all and (min-width:320px) and (max-width:480px){
-    #wrap{
-        width: 650px;
+/*모바일버전 미디어쿼리~~*/
+@media all and (max-width:479px) { 
+    body{
+        background-color: #020039;
     }
+    
+    #wrap{
+        width: 400px;
+        transform: translateY(70%);
+    }
+    h1 > span{
+    color: #ffc400;
+}
     #wrap>.content{
-        padding: 120% 0%;
+        padding: 20% 0%;
+        text-align: center;
     }
     h1{
-        font-size: 45px;
+        font-size: 15px;
+        color: white;
+        margin-bottom: 15px;
+/*        margin-left: 10px;*/
     }
+    p{
+    font-size: 10px;
+    margin-top: 50px;
+    color: #383757;
+    font-weight: bold;
 }
+a{
+    margin-right: 5px;
+    line-height: 15px;
+    font-size: 10px;
+    color: white;
+    /*border: 1px solid #000;*/
+/*    background-color: red;*/
+    border-radius: 20px;
+    padding: 3px 15px;
+    text-decoration: none;
+}
+a:first-child{
+    background-color: black;
+}
+a:nth-child(2){
+    background-color: red;
+}
+a:nth-child(3){
+    background-color: #ffc400;
+}
+a:last-child{
+    margin-right: 0px;
+    background-color: #004e0c;
+}
+a:hover{
+    transform: translate(50%, -50%);
+    background-color: #010021;
+    text-shadow: 1px 1px 1px #919191,
+        1px 5px 1px #919191;
+    transition: all linear 0.25s;
+}
+}
+
