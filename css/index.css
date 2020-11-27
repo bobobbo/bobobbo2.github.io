@@ -91,7 +91,7 @@ a:hover{
         text-align: center;
     }
     h1{
-        font-size: 15px;
+        font-size: 20px;
         color: white;
         margin-bottom: 15px;
 /*        margin-left: 10px;*/
@@ -107,7 +107,7 @@ a:hover{
 a{
     margin-right: 5px;
     line-height: 15px;
-    font-size: 10px;
+    font-size: 15px;
     color: white;
     /*border: 1px solid #000;*/
 /*    background-color: red;*/
